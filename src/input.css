@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+html {
+    @apply scroll-smooth;
+}
+
+nav {
+    @apply bg-zinc-950 w-[20rem] h-screen fixed top-0 left-0 py-10;
+}
+
+nav img {
+    @apply w-30 h-30 rounded-full object-cover border-8 border-zinc-800 mx-auto;
+}
+
+nav h3 {
+    @apply text-white capitalize font-bold text-xl my-5 text-center;
+}
+
+nav ul.social {
+    @apply text-center my-3;
+}
+
+nav ul.social li {
+    @apply inline-block;
+}
+
+nav ul.social li a {
+    @apply bg-zinc-800 rounded-full w-10 h-10 text-center leading-10 text-white block text-lg hover:bg-sky-600;
+}
+
+nav ul.menu {
+    @apply p-5;
+}
+
+nav ul.menu li {
+    @apply mb-6;
+}
+
+nav ul.menu li a {
+    @apply text-gray-500 capitalize hover:text-white text-lg;
+}
+
+nav ul.menu li a i {
+    @apply inline-block w-9;
+}
+
+nav ul.menu li a:hover i {
+    @apply text-sky-600;
+}
+
+nav ul.menu li a.active {
+    @apply text-white;
+}
+nav ul.menu li a.active i {
+    @apply text-sky-600;
+}
+
+.title {
+    @apply text-4xl font-bold py-3 mb-5 relative after:content-[''] after:w-10 after:h-1 after:bg-sky-500 after:block after:absolute after:bottom-0 capitalize;
+}
+
+#about i {
+    @apply text-sky-600 pr-1;
+}
+
+#about label {
+    @apply font-bold pr-2;
+}
+
+progress,
+progress::-webkit-progress-bar {
+    @apply bg-gray-400;
+}
+
+progress::-webkit-progress-value {
+    @apply bg-sky-600;
+}
+
+progress::-moz-progress-bar {
+    @apply bg-sky-600;
+}
+
+#resume h2 {
+    @apply text-2xl font-bold capitalize mb-2 py-2;
+}
+#resume h3 {
+    @apply text-xl uppercase text-gray-500 mb-1;
+}
+#resume p {
+    @apply mb-2;
+}
+#resume ul {
+    @apply my-3;
+}
+#resume li {
+    @apply list-disc list-inside my-1; 
+}
+#resume .box {
+    @apply border-l-2 border-sky-600 p-5 relative after:content-[''] after:w-4 after:h-4 after:rounded-full after:inline-block after:border after:border-sky-600 after:bg-white after:absolute after:top-0 after:left-0 after:-translate-1/2;
+}
+
+#portfolio li {
+    @apply inline-block;
+}
+#portfolio li a {
+    @apply hover:text-sky-600 uppercase block p-3;
+}
+#portfolio ul {
+    @apply text-center;
+}
+#portfolio .box:hover img {
+    @apply scale-120 transition-all duration-500;
+}
+
+#services .flex:hover .w-50 {
+    @apply bg-transparent border-sky-600 text-sky-600 transition-all;
+}
+#services .flex:hover h2 {
+    @apply text-sky-600 transition-all;
+}

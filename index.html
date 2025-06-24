@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <!-- fontawesome icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- owl carousel css -->
+    <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+    <!-- css  -->
+    <link rel="stylesheet" href="src/output.css">
+    <!-- alpine -->
+    <script src="//unpkg.com/alpinejs" defer></script>
+
+    <style>
+        @keyframes cursorBlink {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        #typecusor {
+            animation-name: cursorBlink;
+            animation-iteration-count: infinite;
+            animation-duration: 1s;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="transition-all -translate-x-full lg:translate-none">
+        <img src="photo/profile.jpg" alt="">
+        <h3>alex smith</h3>
+        <ul class="social">
+            <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-skype"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+        </ul>
+        <ul class="menu">
+            <li><a href="#home"><i class="fa-solid fa-home"></i>home</a></li>
+            <li><a href="#about"><i class="fa-solid fa-person"></i>about</a></li>
+            <li><a href="#resume"><i class="fa-solid fa-list"></i>resume</a></li>
+            <li><a href="#portfolio"><i class="fa-solid fa-photo-film"></i>portfolio</a></li>
+            <li><a href="#services"><i class="fa-solid fa-database"></i>services</a></li>
+            <li><a href="#dropdown"><i class="fa-solid fa-arrow-down"></i>dropdown</a></li>
+            <li><a href="#contact"><i class="fa-solid fa-envelope"></i>Contact</a></li>
+        </ul>
+    </nav>
+
+    <button id="toggle" class="lg:hidden fixed top-8 right-8 bg-sky-600 text-white w-10 h-10 text-center text-xl rounded-full">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <main class="lg:ml-[20rem]">
+
+        <section id="home" class="relative h-screen">
+            <img src="photo/banner.jpg" alt="" class="w-full h-full object-cover">
+            <div class="absolute top-1/2 -translate-y-1/2 p-5 w-full h-full bg-black/50 flex flex-col justify-center">
+                <h2 class="text-white capitalize text-7xl font-bold mb-5">alex smith</h2>
+                <p class="text-white text-2xl">
+                    I'm
+                    <span id="typed-text"></span>
+                    <span class="inline-block w-1 h-7 bg-sky-600" id="typecusor"></span>
+                </p>
+            </div>
+        </section>
+
+        <section id="about" class="p-10">
+            <h1 class="title">About</h1>
+            <p class="mb-7">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, autem! Saepe, rerum ut modi eligendi sit laborum alias autem fugiat voluptas, non unde quos odit praesentium corporis ipsam, voluptatibus nobis?</p>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-5">
+                <div class="aspect-square">
+                    <img src="photo/profile.jpg" alt="" class="w-full h-full object-cover">
+                </div>
+                <div class="lg:col-span-2">
+                    <h2 class="font-bold text-2xl mb-5">UI/UX Designer & Web Developer</h2>
+                    <p class="mb-7">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint omnis ad saepe soluta hic totam neque, cumque numquam cupiditate.</p>
+                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-7">
+                        <li>
+                            <i class="fa-solid fa-arrow-right"></i>
+                            <label for="#">Birthday:</label>
+                            <span>1 May 1995</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-arrow-right"></i>
+                            <label for="#">Website:</label>
+                            <span>www.example.com</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-arrow-right"></i>
+                            <label for="#">City:</label>
+                            <span>New York, USA</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-arrow-right"></i>
+                            <label for="#">Age:</label>
+                            <span>30</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-arrow-right"></i>
+                            <label for="#">Degree:</label>
+                            <span>Master</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-arrow-right"></i>
+                            <label for="#">Email:</label>
+                            <span>email@example.com</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-arrow-right"></i>
+                            <label for="#">Freelance:</label>
+                            <span>Avaliable</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-arrow-right"></i>
+                            <label for="#">Phone:</label>
+                            <span>+98765456789</span>
+                        </li>
+                    </ul>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi iure quos sapiente quis et rerum, eaque atque reprehenderit a labore laboriosam dicta repellat molestiae libero illo molestias quam, ipsum mollitia.</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-15 my-10">
+                <div class="flex">
+                    <i class="fa-solid fa-smile text-5xl p-3"></i>
+                    <div class="ml-5">
+                        <p class="text-4xl font-bold">232</p>
+                        <p class="capitalize font-bold my-1">happy clients <span class="font-light lowercase">Lorem ipsum dolor sit.</span></p>
+                    </div>
+                </div>
+                <div class="flex">
+                    <i class="fa-solid fa-smile text-5xl p-3"></i>
+                    <div class="ml-5">
+                        <p class="text-4xl font-bold">251</p>
+                        <p class="capitalize font-bold my-1">projects <span class="font-light lowercase">Lorem ipsum dolor sit.</span></p>
+                    </div>
+                </div>
+                <div class="flex">
+                    <i class="fa-solid fa-smile text-5xl p-3"></i>
+                    <div class="ml-5">
+                        <p class="text-4xl font-bold">1453</p>
+                        <p class="capitalize font-bold my-1">hours of support <span class="font-light lowercase">Lorem ipsum dolor sit.</span></p>
+                    </div>
+                </div>
+                <div class="flex">
+                    <i class="fa-solid fa-smile text-5xl p-3"></i>
+                    <div class="ml-5">
+                        <p class="text-4xl font-bold">32</p>
+                        <p class="capitalize font-bold my-1">hard worker <span class="font-light lowercase">Lorem ipsum dolor sit.</span></p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="skill" class="p-10">
+            <h1 class="title">skills</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae, corrupti?</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 my-10 gap-5">
+                <div>
+                    <div class="flex justify-between uppercase text-sm">
+                        <p>html</p>
+                        <p>100%</p>
+                    </div>
+                    <progress max="100" value="100" class="w-full h-2"></progress>
+                </div>
+                <div>
+                    <div class="flex justify-between uppercase text-sm">
+                        <p>php</p>
+                        <p>80%</p>
+                    </div>
+                    <progress max="100" value="80" class="w-full h-2"></progress>
+                </div>
+                <div>
+                    <div class="flex justify-between uppercase text-sm">
+                        <p>css</p>
+                        <p>90%</p>
+                    </div>
+                    <progress max="100" value="90" class="w-full h-2"></progress>
+                </div>
+                <div>
+                    <div class="flex justify-between uppercase text-sm">
+                        <p>wordpress</p>
+                        <p>90%</p>
+                    </div>
+                    <progress max="100" value="90" class="w-full h-2"></progress>
+                </div>
+                <div>
+                    <div class="flex justify-between uppercase text-sm">
+                        <p>javascript</p>
+                        <p>75%</p>
+                    </div>
+                    <progress max="100" value="75" class="w-full h-2"></progress>
+                </div>
+                <div>
+                    <div class="flex justify-between uppercase text-sm">
+                        <p>photoshop</p>
+                        <p>90%</p>
+                    </div>
+                    <progress max="100" value="90" class="w-full h-2"></progress>
+                </div>
+            </div>
+        </section>
+
+        <section id="resume" class="p-10">
+            <h1 class="title">resume</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque, veniam saepe?</p>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 my-10">
+                <div>
+                    <div>
+                        <h2>summary</h2>
+                        <div class="box">
+                            <h3>brandon johnsom</h3>
+                            <em>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem temporibus unde veniam? Fuga voluptas harum at consequatur, autem placeat totam impedit numquam saepe repudiandae? Cupiditate magnam delectus enim quos ad.</em>
+                            <ul>
+                                <li>Portland par 127</li>
+                                <li>(234) 34546</li>
+                                <li>alice.kerly@gmail.com</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <h2>Education</h2>
+                        <div class="box">
+                            <h3>master of fine art and graphic design</h3>
+                            <p>2015 - 2016</p>
+                            <em>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel.</em>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, ex. Repellendus dignissimos debitis a. Adipisci vitae, recusandae consectetur quisquam ea blanditiis, tempora praesentium nostrum a voluptas dolor tenetur dicta aliquid?</p>
+                        </div>
+                        <div class="box">
+                            <h3>master of fine art and graphic design</h3>
+                            <p>2010 - 2014</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, ex. Repellendus dignissimos debitis a. Adipisci vitae, recusandae consectetur quisquam ea blanditiis, tempora praesentium nostrum a voluptas dolor tenetur dicta aliquid?</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <h2>prefessional experiences</h2>
+                        <div class="box">
+                            <h3>senior graphic specialist</h3>
+                            <p>2019 - present</p>
+                            <em>New York, NY</em>
+                            <ul>
+                                <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis, maiores!</li>
+                                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A nulla eligendi doloremque accusantium cumque? Porro atque commodi reprehenderit dolor?</li>
+                                <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus, modi velit.</li>
+                                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam ducimus cumque eius commodi error vel temporibus quam dignissimos!</li>
+                            </ul>
+                        </div>
+                        <div class="box">
+                            <h3>graphic design specialist</h3>
+                            <p>2017 - 2018</p>
+                            <em>Stepping Stone Advertising, New York, NY</em>
+                            <ul>
+                                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, consequuntur.</li>
+                                <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident.</li>
+                                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt aspernatur exercitationem temporibus eum dolore.</li>
+                                <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta necessitatibus assumenda, et tempora omnis dolore!</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="p-10 bg-sky-50" id="portfolio">
+            <h1 class="title">Portfolio</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus molestias tenetur quia accusamus quo, nostrum saepe porro recusandae aliquid impedit ipsa ea modi laboriosam, officiis, fuga distinctio ducimus. Laborum, omnis.</p>
+
+            <div x-data="{item: 'all'}">
+
+                <div class="my-10">
+                    <ul>
+                        <li>
+                            <a href="#" @click.prevent="item = 'all'" :class="item == 'all' ? 'text-sky-600' : ''">All</a>
+                        </li>
+                        <li>
+                            <a href="#" @click.prevent="item = 'app'" :class="item == 'app' ? 'text-sky-600' : ''">app</a>
+                        </li>
+                        <li>
+                            <a href="#" @click.prevent="item = 'product'" :class="item == 'product' ? 'text-sky-600' : ''">product</a>
+                        </li>
+                        <li>
+                            <a href="#" @click.prevent="item = 'branding'" :class="item == 'branding' ? 'text-sky-600' : ''">branding</a>
+                        </li>
+                        <li>
+                            <a href="#" @click.prevent="item = 'book'" :class="item == 'book' ? 'text-sky-600' : ''">books</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-10">
+                    <div class="aspect-video relative overflow-hidden box" x-show="item == 'app' || item == 'all'">
+                        <img src="photo/photo-1.jpg" alt="" class="!w-full !h-full object-cover">
+                        <div class="absolute top-0 left-0 w-full h-full bg-black/50 text-white transition-all duration-500 opacity-0 hover:opacity-100">
+                            <h3 class="absolute bg-sky-600 p-2 top-3 left-3 capitalize">App</h3>
+                            <p class="absolute left-1/2 top-1/2 -translate-x-1/2 -translatey-1/2">
+                                <i class="fa-solid fa-search"></i>
+                                <i class="fa-solid fa-link"></i>
+                            </p>
+                            <p class="absolute bottom-3 left-1/2 -translate-x-1/2">This is sample</p>
+                        </div>
+                    </div>
+                    <div class="aspect-video relative overflow-hidden box" x-show="item == 'product' || item == 'all'">
+                        <img src="photo/photo-2.jpg" alt="" class="!w-full !h-full object-cover">
+                        <div class="absolute top-0 left-0 w-full h-full bg-black/50 text-white transition-all duration-500 opacity-0 hover:opacity-100">
+                            <h3 class="absolute bg-sky-600 p-2 top-3 left-3 capitalize">product</h3>
+                            <p class="absolute left-1/2 top-1/2 -translate-x-1/2 -translatey-1/2">
+                                <i class="fa-solid fa-search"></i>
+                                <i class="fa-solid fa-link"></i>
+                            </p>
+                            <p class="absolute bottom-3 left-1/2 -translate-x-1/2">This is sample</p>
+                        </div>
+                    </div>
+                    <div class="aspect-video relative overflow-hidden box" x-show="item == 'branding' || item == 'all'">
+                        <img src="photo/photo-3.jpg" alt="" class="!w-full !h-full object-cover">
+                        <div class="absolute top-0 left-0 w-full h-full bg-black/50 text-white transition-all duration-500 opacity-0 hover:opacity-100">
+                            <h3 class="absolute bg-sky-600 p-2 top-3 left-3 capitalize">branding</h3>
+                            <p class="absolute left-1/2 top-1/2 -translate-x-1/2 -translatey-1/2">
+                                <i class="fa-solid fa-search"></i>
+                                <i class="fa-solid fa-link"></i>
+                            </p>
+                            <p class="absolute bottom-3 left-1/2 -translate-x-1/2">This is sample</p>
+                        </div>
+                    </div>
+                    <div class="aspect-video relative overflow-hidden box" x-show="item == 'book' || item == 'all'">
+                        <img src="photo/photo-4.jpg" alt="" class="!w-full !h-full object-cover">
+                        <div class="absolute top-0 left-0 w-full h-full bg-black/50 text-white transition-all duration-500 opacity-0 hover:opacity-100">
+                            <h3 class="absolute bg-sky-600 p-2 top-3 left-3 capitalize">book</h3>
+                            <p class="absolute left-1/2 top-1/2 -translate-x-1/2 -translatey-1/2">
+                                <i class="fa-solid fa-search"></i>
+                                <i class="fa-solid fa-link"></i>
+                            </p>
+                            <p class="absolute bottom-3 left-1/2 -translate-x-1/2">This is sample</p>
+                        </div>
+                    </div>
+                    <div class="aspect-video relative overflow-hidden box" x-show="item == 'product' || item == 'all'">
+                        <img src="photo/photo-5.jpg" alt="" class="!w-full !h-full object-cover">
+                        <div class="absolute top-0 left-0 w-full h-full bg-black/50 text-white transition-all duration-500 opacity-0 hover:opacity-100">
+                            <h3 class="absolute bg-sky-600 p-2 top-3 left-3 capitalize">product</h3>
+                            <p class="absolute left-1/2 top-1/2 -translate-x-1/2 -translatey-1/2">
+                                <i class="fa-solid fa-search"></i>
+                                <i class="fa-solid fa-link"></i>
+                            </p>
+                            <p class="absolute bottom-3 left-1/2 -translate-x-1/2">This is sample</p>
+                        </div>
+                    </div>
+                    <div class="aspect-video relative overflow-hidden box" x-show="item == 'app' || item == 'all'">
+                        <img src="photo/photo-6.jpg" alt="" class="!w-full !h-full object-cover">
+                        <div class="absolute top-0 left-0 w-full h-full bg-black/50 text-white transition-all duration-500 opacity-0 hover:opacity-100">
+                            <h3 class="absolute bg-sky-600 p-2 top-3 left-3 capitalize">App</h3>
+                            <p class="absolute left-1/2 top-1/2 -translate-x-1/2 -translatey-1/2">
+                                <i class="fa-solid fa-search"></i>
+                                <i class="fa-solid fa-link"></i>
+                            </p>
+                            <p class="absolute bottom-3 left-1/2 -translate-x-1/2">This is sample</p>
+                        </div>
+                    </div>
+                    <div class="aspect-video relative overflow-hidden box" x-show="item == 'product' || item == 'all'">
+                        <img src="photo/photo-7.jpg" alt="" class="!w-full !h-full object-cover">
+                        <div class="absolute top-0 left-0 w-full h-full bg-black/50 text-white transition-all duration-500 opacity-0 hover:opacity-100">
+                            <h3 class="absolute bg-sky-600 p-2 top-3 left-3 capitalize">product</h3>
+                            <p class="absolute left-1/2 top-1/2 -translate-x-1/2 -translatey-1/2">
+                                <i class="fa-solid fa-search"></i>
+                                <i class="fa-solid fa-link"></i>
+                            </p>
+                            <p class="absolute bottom-3 left-1/2 -translate-x-1/2">This is sample</p>
+                        </div>
+                    </div>
+                    <div class="aspect-video relative overflow-hidden box" x-show="item == 'branding' || item == 'all'">
+                        <img src="photo/photo-8.jpg" alt="" class="!w-full !h-full object-cover">
+                        <div class="absolute top-0 left-0 w-full h-full bg-black/50 text-white transition-all duration-500 opacity-0 hover:opacity-100">
+                            <h3 class="absolute bg-sky-600 p-2 top-3 left-3 capitalize">branding</h3>
+                            <p class="absolute left-1/2 top-1/2 -translate-x-1/2 -translatey-1/2">
+                                <i class="fa-solid fa-search"></i>
+                                <i class="fa-solid fa-link"></i>
+                            </p>
+                            <p class="absolute bottom-3 left-1/2 -translate-x-1/2">This is sample</p>
+                        </div>
+                    </div>
+                    <div class="aspect-video relative overflow-hidden box" x-show="item == 'product' || item == 'all'">
+                        <img src="photo/photo-9.jpg" alt="" class="!w-full !h-full object-cover">
+                        <div class="absolute top-0 left-0 w-full h-full bg-black/50 text-white transition-all duration-500 opacity-0 hover:opacity-100">
+                            <h3 class="absolute bg-sky-600 p-2 top-3 left-3 capitalize">product</h3>
+                            <p class="absolute left-1/2 top-1/2 -translate-x-1/2 -translatey-1/2">
+                                <i class="fa-solid fa-search"></i>
+                                <i class="fa-solid fa-link"></i>
+                            </p>
+                            <p class="absolute bottom-3 left-1/2 -translate-x-1/2">This is sample</p>
+                        </div>
+                    </div>
+                    <div class="aspect-video relative overflow-hidden box" x-show="item == 'app' || item == 'all'">
+                        <img src="photo/photo-10.jpg" alt="" class="!w-full !h-full object-cover">
+                        <div class="absolute top-0 left-0 w-full h-full bg-black/50 text-white transition-all duration-500 opacity-0 hover:opacity-100">
+                            <h3 class="absolute bg-sky-600 p-2 top-3 left-3 capitalize">App</h3>
+                            <p class="absolute left-1/2 top-1/2 -translate-x-1/2 -translatey-1/2">
+                                <i class="fa-solid fa-search"></i>
+                                <i class="fa-solid fa-link"></i>
+                            </p>
+                            <p class="absolute bottom-3 left-1/2 -translate-x-1/2">This is sample</p>
+                        </div>
+                    </div>
+                    <div class="aspect-video relative overflow-hidden box" x-show="item == 'book' || item == 'all'">
+                        <img src="photo/photo-11.jpg" alt="" class="!w-full !h-full object-cover">
+                        <div class="absolute top-0 left-0 w-full h-full bg-black/50 text-white transition-all duration-500 opacity-0 hover:opacity-100">
+                            <h3 class="absolute bg-sky-600 p-2 top-3 left-3 capitalize">book</h3>
+                            <p class="absolute left-1/2 top-1/2 -translate-x-1/2 -translatey-1/2">
+                                <i class="fa-solid fa-search"></i>
+                                <i class="fa-solid fa-link"></i>
+                            </p>
+                            <p class="absolute bottom-3 left-1/2 -translate-x-1/2">This is sample</p>
+                        </div>
+                    </div>
+                    <div class="aspect-video relative overflow-hidden box" x-show="item == 'branding' || item == 'all'">
+                        <img src="photo/photo-12.jpg" alt="" class="!w-full !h-full object-cover">
+                        <div class="absolute top-0 left-0 w-full h-full bg-black/50 text-white transition-all duration-500 opacity-0 hover:opacity-100">
+                            <h3 class="absolute bg-sky-600 p-2 top-3 left-3 capitalize">branding</h3>
+                            <p class="absolute left-1/2 top-1/2 -translate-x-1/2 -translatey-1/2">
+                                <i class="fa-solid fa-search"></i>
+                                <i class="fa-solid fa-link"></i>
+                            </p>
+                            <p class="absolute bottom-3 left-1/2 -translate-x-1/2">This is sample</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="services" class="p-10">
+            <h1 class="title">Services</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, commodi. Libero repudiandae quae sapiente doloremque consectetur molestiae labore enim commodi. Atque iure dolorum nam iusto libero qui nemo natus facilis?</p>
+            <div class="my-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                <div class="flex items-start">
+                    <div class="border w-50 aspect-square bg-sky-600 flex items-center justify-center text-3xl text-white rounded-full">
+                        <i class="fa-solid fa-suitcase"></i>
+                    </div>
+                    <div class="pl-5">
+                        <h2 class="font-bold capitalize mb-5">molestiae labore</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, aut repellendus quia quidem aperiam non blanditiis suscipit!</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <div class="border w-50 aspect-square bg-sky-600 flex items-center justify-center text-3xl text-white rounded-full">
+                        <i class="fa-solid fa-binoculars"></i>
+                    </div>
+                    <div class="pl-5">
+                        <h2 class="font-bold capitalize mb-5">molestiae labore</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, aut repellendus quia quidem aperiam non blanditiis suscipit!</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <div class="border w-50 aspect-square bg-sky-600 flex items-center justify-center text-3xl text-white rounded-full">
+                        <i class="fa-solid fa-list-check"></i>
+                    </div>
+                    <div class="pl-5">
+                        <h2 class="font-bold capitalize mb-5">molestiae labore</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, aut repellendus quia quidem aperiam non blanditiis suscipit!</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <div class="border w-50 aspect-square bg-sky-600 flex items-center justify-center text-3xl text-white rounded-full">
+                        <i class="fa-solid fa-sun"></i>
+                    </div>
+                    <div class="pl-5">
+                        <h2 class="font-bold capitalize mb-5">molestiae labore</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, aut repellendus quia quidem aperiam non blanditiis suscipit!</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <div class="border w-50 aspect-square bg-sky-600 flex items-center justify-center text-3xl text-white rounded-full">
+                        <i class="fa-solid fa-chart-simple"></i>
+
+                    </div>
+                    <div class="pl-5">
+                        <h2 class="font-bold capitalize mb-5">molestiae labore</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, aut repellendus quia quidem aperiam non blanditiis suscipit!</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <div class="border w-50 aspect-square bg-sky-600 flex items-center justify-center text-3xl text-white rounded-full">
+                        <i class="fa-solid fa-suitcase"></i>
+                    </div>
+                    <div class="pl-5">
+                        <h2 class="font-bold capitalize mb-5">molestiae labore</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, aut repellendus quia quidem aperiam non blanditiis suscipit!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="p-10 bg-sky-50">
+            <h1 class="title">testimonials</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil, incidunt nobis dolore doloremque quidem repudiandae. Officiis aut expedita quo accusantium? Ex ut inventore placeat recusandae sequi soluta praesentium, rem molestiae?</p>
+            <div class="my-10">
+                <div class="owl-carousel">
+                    <div>
+                        <p class="bg-white p-5 mb-10 relative after:content-[''] after:inline-block after:w-10 after:h-10 after:bg-white after:absolute after:left-1/2 after:bottom-0 after:-translate-x-1/2 after:translate-1/2 after:rotate-45 before:content-[open-quote] before:text-5xl before:text-sky-600 italic">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi quibusdam temporibus ad quis? Sit consequuntur quibusdam, blanditiis beatae fugit sapiente, architecto mollitia minus odit labore corporis distinctio illum, inventore laudantium.</p>
+                        <img src="photo/profile.jpg" alt="" class="!w-20 h-20 rounded-full object-cover mx-auto mb-3">
+                        <h2 class="font-bold text-center">John Doe</h2>
+                        <p class="font-light text-center">Store Manager</p>
+                    </div>
+                    <div>
+                        <p class="bg-white p-5 mb-10 relative after:content-[''] after:inline-block after:w-10 after:h-10 after:bg-white after:absolute after:left-1/2 after:bottom-0 after:-translate-x-1/2 after:translate-1/2 after:rotate-45 before:content-[open-quote] before:text-5xl before:text-sky-600 italic">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi quibusdam temporibus ad quis? Sit consequuntur quibusdam, blanditiis beatae fugit sapiente, architecto mollitia minus odit labore corporis distinctio illum, inventore laudantium.</p>
+                        <img src="photo/profile.jpg" alt="" class="!w-20 h-20 rounded-full object-cover mx-auto mb-3">
+                        <h2 class="font-bold text-center">Alice</h2>
+                        <p class="font-light text-center">Web Developer</p>
+                    </div>
+                    <div>
+                        <p class="bg-white p-5 mb-10 relative after:content-[''] after:inline-block after:w-10 after:h-10 after:bg-white after:absolute after:left-1/2 after:bottom-0 after:-translate-x-1/2 after:translate-1/2 after:rotate-45 before:content-[open-quote] before:text-5xl before:text-sky-600 italic">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi quibusdam temporibus ad quis? Sit consequuntur quibusdam, blanditiis beatae fugit sapiente, architecto mollitia minus odit labore corporis distinctio illum, inventore laudantium.</p>
+                        <img src="photo/profile.jpg" alt="" class="!w-20 h-20 rounded-full object-cover mx-auto mb-3">
+                        <h2 class="font-bold text-center">Henery</h2>
+                        <p class="font-light text-center">Manager</p>
+                    </div>
+                    <div>
+                        <p class="bg-white p-5 mb-10 relative after:content-[''] after:inline-block after:w-10 after:h-10 after:bg-white after:absolute after:left-1/2 after:bottom-0 after:-translate-x-1/2 after:translate-1/2 after:rotate-45 before:content-[open-quote] before:text-5xl before:text-sky-600 italic">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi quibusdam temporibus ad quis? Sit consequuntur quibusdam, blanditiis beatae fugit sapiente, architecto mollitia minus odit labore corporis distinctio illum, inventore laudantium.</p>
+                        <img src="photo/profile.jpg" alt="" class="!w-20 h-20 rounded-full object-cover mx-auto mb-3">
+                        <h2 class="font-bold text-center">Jadan</h2>
+                        <p class="font-light text-center">CEO</p>
+                    </div>
+                    <div>
+                        <p class="bg-white p-5 mb-10 relative after:content-[''] after:inline-block after:w-10 after:h-10 after:bg-white after:absolute after:left-1/2 after:bottom-0 after:-translate-x-1/2 after:translate-1/2 after:rotate-45 before:content-[open-quote] before:text-5xl before:text-sky-600 italic">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum totam cupiditate fugiat laudantium adipisci. Sequi distinctio molestiae reiciendis cumque, voluptatibus deleniti at! Id excepturi tempora quas, obcaecati quibusdam consequuntur perspiciatis!</p>
+                        <img src="photo/profile.jpg" alt="" class="!w-20 h-20 rounded-full object-cover mx-auto mb-3">
+                        <h2 class="font-bold text-center">Dean</h2>
+                        <p class="font-light text-center">Photographer</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="p-10">
+            <h1 class="title">Contact</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti?</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5 my-10">
+                <div class="shadow-xl p-7">
+                    <div class="flex items-start mb-5">
+                        <i class="fa-solid fa-map-location p-5 bg-sky-50 rounded-full inline-block text-sky-600 hover:bg-sky-600 hover:text-white"></i>
+                        <div class="px-5">
+                            <h2 class="text-xl font-bold mb-3">Address</h2>
+                            <p class="text-md">A108 Admam Street, New York, NY09345</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start mb-5">
+                        <i class="fa-solid fa-phone-alt p-5 bg-sky-50 rounded-full inline-block text-sky-600 hover:bg-sky-600 hover:text-white"></i>
+                        <div class="px-5">
+                            <h2 class="text-xl font-bold mb-3">Call Us</h2>
+                            <p class="text-md">+098723456t</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start mb-5">
+                        <i class="fa-solid fa-envelope p-5 bg-sky-50 rounded-full inline-block text-sky-600 hover:bg-sky-600 hover:text-white"></i>
+                        <div class="px-5">
+                            <h2 class="text-xl font-bold mb-3">Email us</h2>
+                            <p class="text-md">developer@testing.com</p>
+                        </div>
+                    </div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d29556.72243710011!2d96.14751643756117!3d16.78559138054353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2smm!4v1750754643755!5m2!1sen!2smm" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="shadow-lg p-7">
+                    <form action="" method="">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                            <div>
+                                <label for="#">Your Name</label>
+                                <input type="text" name="" id="" class="w-full border border-gray-500 p-3 my-3">
+                            </div>
+                            <div>
+                                <label for="#">Email</label>
+                                <input type="email" name="" id="" class="w-full border border-gray-500 p-3 my-3">
+                            </div>
+                            <div class="col-span-2">
+                                <label for="#">Subject</label>
+                                <input type="text" name="" id="" class="w-full border border-gray-500 p-3 my-3">
+                            </div>
+                            <div class="col-span-2">
+                                <label for="#">Message</label>
+                                <textarea name="" id="" class="w-full border border-gray-500 p-3 my-3"></textarea>
+                            </div>
+                            <div class="col-span-2 text-center">
+                                <button type="submit" class="bg-sky-600 text-white px-10 py-3 rounded-full hover:bg-sky-500">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </section>
+
+        <div id="up" class="bg-sky-600 text-white w-10 h-10 rounded-full text-center leading-10 text-xl fixed bottom-10 right-10 cursor-pointer hidden">
+            <i class="fa-solid fa-arrow-up"></i>
+        </div>
+
+    </main>
+
+    <!-- jquery -->
+    <script src="js/jquery.min.js"></script>
+    <!-- owl-carousel js -->
+    <script src="OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+    <!-- custom js -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
